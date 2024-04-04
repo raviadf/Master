@@ -1,0 +1,9 @@
+{
+	"name": "Ravi2024Training",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e6189be3-7a99-479f-b6be-3b78354d158b",
+		"tenantId": "40a0667d-cd49-4713-9524-b1779b0ede6f"
+	}
+}
