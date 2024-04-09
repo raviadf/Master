@@ -19,9 +19,6 @@
 						"type": "BinarySource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
-							"wildcardFolderPath": "Input",
-							"wildcardFileName": "*Store*",
 							"deleteFilesAfterCompletion": false
 						},
 						"formatSettings": {
