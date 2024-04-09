@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "MyFamily.csv.xlsx",
+				"fileName": "MyFamily.csv",
 				"folderPath": "Input",
 				"container": "raviadf2024"
 			},
