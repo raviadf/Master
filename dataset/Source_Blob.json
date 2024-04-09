@@ -15,10 +15,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@dataset().InputFileName",
-					"type": "Expression"
-				},
 				"folderPath": "Input",
 				"container": "raviadf2024"
 			}
