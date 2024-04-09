@@ -1,0 +1,27 @@
+{
+	"name": "Source_Blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Conn_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"InputFileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().InputFileName",
+					"type": "Expression"
+				},
+				"folderPath": "Input",
+				"container": "raviadf2024"
+			}
+		}
+	}
+}
