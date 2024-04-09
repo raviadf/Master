@@ -1,0 +1,17 @@
+{
+	"name": "Source_Blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Conn_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "raviadf2024"
+			}
+		}
+	}
+}
