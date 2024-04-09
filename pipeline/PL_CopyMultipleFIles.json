@@ -19,6 +19,7 @@
 						"type": "BinarySource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
+							"fileListPath": "raviadf2024/Input/ListFiles.txt",
 							"deleteFilesAfterCompletion": false
 						},
 						"formatSettings": {
