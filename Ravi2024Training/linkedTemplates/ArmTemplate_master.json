@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "Ravi2024Training"
 		},
+		"Conn_AzureSQLDB_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Conn_AzureSQLDB'"
+		},
 		"Conn_Blob_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Conn_Blob'"
@@ -37,6 +41,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"Conn_AzureSQLDB_connectionString": {
+						"value": "[parameters('Conn_AzureSQLDB_connectionString')]"
 					},
 					"Conn_Blob_connectionString": {
 						"value": "[parameters('Conn_Blob_connectionString')]"

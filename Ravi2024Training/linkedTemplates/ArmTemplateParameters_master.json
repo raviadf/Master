@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "Ravi2024Training"
 		},
+		"Conn_AzureSQLDB_connectionString": {
+			"value": ""
+		},
 		"Conn_Blob_connectionString": {
 			"value": ""
 		},
