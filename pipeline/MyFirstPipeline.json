@@ -3,7 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy datataaa",
+				"name": "Copy Abhi",
+				"description": "created for abhi",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
