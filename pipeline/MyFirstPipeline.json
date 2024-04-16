@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy datataaa",
+				"name": "Copy DOne",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -45,6 +45,19 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Append variable1",
+				"type": "AppendVariable",
+				"dependsOn": [
+					{
+						"activity": "Copy DOne",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"userProperties": []
 			}
 		],
 		"parameters": {
