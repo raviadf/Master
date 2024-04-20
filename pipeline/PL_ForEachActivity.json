@@ -1,14 +1,26 @@
 {
 	"name": "PL_ForEachActivity",
 	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			}
+		],
 		"variables": {
 			"V_ArrayInput": {
 				"type": "Array"
 			},
 			"V_ArrayOutput": {
-				"type": "String"
+				"type": "Array"
 			},
-			"V_": {
+			"V_ArrayValue": {
 				"type": "String"
 			}
 		},
