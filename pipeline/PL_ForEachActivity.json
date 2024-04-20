@@ -3,6 +3,12 @@
 	"properties": {
 		"variables": {
 			"V_ArrayInput": {
+				"type": "Array"
+			},
+			"V_ArrayOutput": {
+				"type": "String"
+			},
+			"V_": {
 				"type": "String"
 			}
 		},
