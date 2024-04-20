@@ -48,7 +48,7 @@
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"itemType"
+						"lastModified"
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
