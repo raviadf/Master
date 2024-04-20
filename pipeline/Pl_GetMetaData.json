@@ -44,7 +44,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "Source_Blob",
+						"referenceName": "DS_GetMetaData",
 						"type": "DatasetReference"
 					},
 					"fieldList": [],
