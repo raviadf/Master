@@ -1,0 +1,11 @@
+{
+	"name": "PL_ForEachActivity",
+	"properties": {
+		"variables": {
+			"V_ArrayInput": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
