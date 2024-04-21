@@ -1,0 +1,40 @@
+{
+	"name": "Pl_IfActivity",
+	"properties": {
+		"activities": [
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": []
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Number",
+					"value": 12
+				}
+			}
+		],
+		"variables": {
+			"Number": {
+				"type": "Integer"
+			}
+		},
+		"annotations": []
+	}
+}
