@@ -1,0 +1,38 @@
+{
+	"name": "DS_DynamicCopyDATA",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Conn_AzureSQLDB",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"P_TableNAme": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Service",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UserName",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().P_TableNAme",
+				"type": "Expression"
+			}
+		}
+	}
+}
