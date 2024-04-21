@@ -13,7 +13,45 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(mod(variables('Number'),2),0)",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Set variable3",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "Message",
+								"value": "OddNumber"
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Set variable2",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "Message",
+								"value": "EvenNumber"
+							}
+						}
+					]
+				}
 			},
 			{
 				"name": "Set variable1",
@@ -33,6 +71,9 @@
 		"variables": {
 			"Number": {
 				"type": "Integer"
+			},
+			"Message": {
+				"type": "String"
 			}
 		},
 		"annotations": []
