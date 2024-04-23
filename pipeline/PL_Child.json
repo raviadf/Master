@@ -1,5 +1,5 @@
 {
-	"name": "PL_SetVariable",
+	"name": "PL_Child",
 	"properties": {
 		"activities": [
 			{
@@ -13,10 +13,18 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "Value",
-					"value": "12"
+					"value": {
+						"value": "@pipeline().parameters.P_Value",
+						"type": "Expression"
+					}
 				}
 			}
 		],
+		"parameters": {
+			"P_Value": {
+				"type": "string"
+			}
+		},
 		"variables": {
 			"Value": {
 				"type": "String"

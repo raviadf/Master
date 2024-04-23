@@ -12,10 +12,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "PL_SetVariable",
+						"referenceName": "PL_Child",
 						"type": "PipelineReference"
 					},
-					"waitOnCompletion": true
+					"waitOnCompletion": true,
+					"parameters": {
+						"P_Value": "45"
+					}
 				}
 			}
 		],
