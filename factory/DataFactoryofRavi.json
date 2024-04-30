@@ -1,0 +1,9 @@
+{
+	"name": "DataFactoryofRavi",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d0784b07-0523-43d4-bf74-36392428749c",
+		"tenantId": "4369f149-c303-44ca-9010-9fe38f874eb9"
+	}
+}
