@@ -137,6 +137,9 @@
 				"type": "String"
 			}
 		},
+		"folder": {
+			"name": "ADF 1.0"
+		},
 		"annotations": []
 	}
 }

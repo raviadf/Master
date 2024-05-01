@@ -35,6 +35,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -71,6 +72,9 @@
 			"FileExists": {
 				"type": "Boolean"
 			}
+		},
+		"folder": {
+			"name": "ADF 1.0"
 		},
 		"annotations": []
 	}

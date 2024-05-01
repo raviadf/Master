@@ -22,13 +22,12 @@
 							"type": "String"
 						}
 					}
-				},
-				"linkedServiceName": {
-					"referenceName": "Conn_AzureSQLDB",
-					"type": "LinkedServiceReference"
 				}
 			}
 		],
+		"folder": {
+			"name": "ADF 1.0"
+		},
 		"annotations": []
 	}
 }

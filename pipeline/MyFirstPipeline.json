@@ -60,6 +60,9 @@
 				"defaultValue": "Printer.txt"
 			}
 		},
+		"folder": {
+			"name": "ADF 1.0"
+		},
 		"annotations": [],
 		"lastPublishTime": "2024-04-04T17:10:43Z"
 	},

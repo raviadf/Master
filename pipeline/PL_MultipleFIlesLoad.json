@@ -13,9 +13,15 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"fieldList": []
+				}
 			}
 		],
+		"folder": {
+			"name": "ADF 1.0"
+		},
 		"annotations": []
 	}
 }
