@@ -74,6 +74,13 @@
 				"     broadcast: 'auto')~> join1",
 				"join1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     input(",
+				"          EMPNO as integer,",
+				"          ENAME as string,",
+				"          Job as string,",
+				"          DeptNO as integer,",
+				"          Loc as string",
+				"     ),",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
 				"     schemaName: 'dbo',",
@@ -84,7 +91,13 @@
 				"     upsertable: false,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          EMPNO,",
+				"          ENAME,",
+				"          Job = JOB,",
+				"          Loc = LOC",
+				"     )) ~> sink1"
 			]
 		}
 	}
