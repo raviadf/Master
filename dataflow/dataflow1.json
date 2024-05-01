@@ -20,10 +20,11 @@
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     limit: 100,",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
-				"     schemaName: '',",
-				"     tableName: '',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'EMP',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> source1",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false) ~> source2"
