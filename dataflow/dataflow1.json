@@ -96,7 +96,6 @@
 				"          EMPNO,",
 				"          ENAME,",
 				"          Job = JOB,",
-				"          DeptNO = source1@DEPTNO,",
 				"          Loc = LOC",
 				"     )) ~> sink1"
 			]
