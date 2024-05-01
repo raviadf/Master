@@ -73,7 +73,7 @@
 				"     partitionBy('roundRobin', 2),",
 				"     broadcast: 'auto')~> join1",
 				"join1 sink(allowSchemaDrift: true,",
-				"     validateSchema: false,",
+				"     validateSchema: true,",
 				"     input(",
 				"          EMPNO as integer,",
 				"          ENAME as string,",
