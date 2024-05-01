@@ -21,10 +21,6 @@
 			],
 			"sinks": [
 				{
-					"linkedService": {
-						"referenceName": "LS_SQL_CONN",
-						"type": "LinkedServiceReference"
-					},
 					"name": "sink1"
 				}
 			],
@@ -73,33 +69,9 @@
 				"     partitionBy('roundRobin', 2),",
 				"     broadcast: 'auto')~> join1",
 				"join1 sink(allowSchemaDrift: true,",
-				"     validateSchema: true,",
-				"     input(",
-				"          EMPNO as integer,",
-				"          ENAME as string,",
-				"          Job as string,",
-				"          DeptNO as integer,",
-				"          Loc as string",
-				"     ),",
-				"     format: 'table',",
-				"     store: 'sqlserver',",
-				"     schemaName: 'dbo',",
-				"     tableName: 'EMP_2',",
-				"     insertable: true,",
-				"     updateable: false,",
-				"     deletable: false,",
-				"     upsertable: false,",
+				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true,",
-				"     saveOrder: 1,",
-				"     errorHandlingOption: 'stopOnFirstError',",
-				"     mapColumn(",
-				"          EMPNO,",
-				"          ENAME,",
-				"          Job = JOB,",
-				"          DeptNO = source1@DEPTNO,",
-				"          Loc = LOC",
-				"     )) ~> sink1"
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
