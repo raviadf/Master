@@ -10,6 +10,13 @@
 						"type": "LinkedServiceReference"
 					},
 					"name": "source1"
+				},
+				{
+					"linkedService": {
+						"referenceName": "LS_SQL_CONN",
+						"type": "LinkedServiceReference"
+					},
+					"name": "source2"
 				}
 			],
 			"sinks": [],
@@ -32,7 +39,14 @@
 				"     store: 'sqlserver',",
 				"     schemaName: 'dbo',",
 				"     tableName: 'EMP',",
-				"     isolationLevel: 'READ_UNCOMMITTED') ~> source1"
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> source1",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'DEPT',",
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> source2"
 			]
 		}
 	}
