@@ -24,10 +24,12 @@
 				"     limit: 100,",
 				"     ignoreNoFilesFound: false,",
 				"     format: 'delimited',",
+				"     container: 'input',",
+				"     fileName: 'SampleCity.csv',",
 				"     columnDelimiter: ',',",
 				"     escapeChar: '\\\\',",
 				"     quoteChar: '\\\"',",
-				"     columnNamesAsHeader: false) ~> source1"
+				"     columnNamesAsHeader: true) ~> source1"
 			]
 		}
 	}
