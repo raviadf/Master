@@ -51,7 +51,6 @@
 				"          LastName = split(Name,'_')[2]) ~> derivedColumn1",
 				"derivedColumn1 select(mapColumn(",
 				"          EmpID,",
-				"          Name,",
 				"          FirstName,",
 				"          LastName",
 				"     ),",
