@@ -1,5 +1,5 @@
 {
-	"name": "dataflow1",
+	"name": "DFT_Example1",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
@@ -95,12 +95,19 @@
 				"     schemaName: 'dbo',",
 				"     tableName: 'EMP_2',",
 				"     insertable: true,",
-				"     updateable: false,",
+				"     updateable: true,",
 				"     deletable: false,",
 				"     upsertable: false,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          EMPNO,",
+				"          ENAME,",
+				"          Job = JOB,",
+				"          DeptNO = DEPTNO,",
+				"          Loc = LOC",
+				"     )) ~> sink1"
 			]
 		}
 	}
