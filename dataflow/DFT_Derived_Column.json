@@ -50,7 +50,7 @@
 				"     validateSchema: false,",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
-				"     schemaName: '',",
+				"     schemaName: 'dbo',",
 				"     tableName: '',",
 				"     preSQLs:['DROP TABLE IF EXISTS tbNames\\nCREATE TABLE tbNames \\n(\\nID Int,\\nFirstName nvarchar(100),\\nLastName nvarchar(100)\\n\\n)'],",
 				"     insertable: true,",
