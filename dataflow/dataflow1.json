@@ -56,7 +56,7 @@
 				"     schemaName: 'dbo',",
 				"     tableName: 'DEPT',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> source2",
-				"source1, source2 join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"source1, source2 join(source1@DEPTNO == source2@DEPTNO,",
 				"     joinType:'outer',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
