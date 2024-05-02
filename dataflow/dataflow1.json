@@ -5,10 +5,6 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"linkedService": {
-						"referenceName": "LS_SQL_CONN",
-						"type": "LinkedServiceReference"
-					},
 					"name": "source1"
 				}
 			],
@@ -19,21 +15,8 @@
 				}
 			],
 			"scriptLines": [
-				"source(output(",
-				"          EMPNO as integer,",
-				"          ENAME as string,",
-				"          Job as string,",
-				"          DeptNO as integer,",
-				"          Loc as string",
-				"     ),",
-				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     limit: 100,",
-				"     format: 'table',",
-				"     store: 'sqlserver',",
-				"     schemaName: 'dbo',",
-				"     tableName: 'EMP',",
-				"     isolationLevel: 'READ_UNCOMMITTED') ~> source1",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false) ~> source1",
 				"source1 select(mapColumn(",
 				"          EMPNO,",
 				"          ENAME,",
