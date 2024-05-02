@@ -21,7 +21,7 @@
 				"     format: 'table',",
 				"     store: 'sqlserver',",
 				"     schemaName: 'dbo',",
-				"     tableName: '',",
+				"     tableName: 'EMP_2',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> source1"
 			]
 		}
