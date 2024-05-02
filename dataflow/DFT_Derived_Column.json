@@ -24,6 +24,9 @@
 			"transformations": [
 				{
 					"name": "derivedColumn1"
+				},
+				{
+					"name": "select1"
 				}
 			],
 			"scriptLines": [
@@ -46,7 +49,15 @@
 				"     multiLineRow: true) ~> source1",
 				"source1 derive(FirstName = split(Name,'_')[1],",
 				"          LastName = split(Name,'_')[2]) ~> derivedColumn1",
-				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"derivedColumn1 select(mapColumn(",
+				"          EmpID,",
+				"          Name,",
+				"          FirstName,",
+				"          LastName",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          ID as integer,",
