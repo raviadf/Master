@@ -12,7 +12,11 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "derivedColumn1"
@@ -37,7 +41,11 @@
 				"     columnNamesAsHeader: true,",
 				"     multiLineRow: true) ~> source1",
 				"source1 derive(FirstName = split(Name,'_')[1],",
-				"          LastName = split(Name,'_')[2]) ~> derivedColumn1"
+				"          LastName = split(Name,'_')[2]) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
