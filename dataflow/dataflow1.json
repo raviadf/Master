@@ -67,7 +67,7 @@
 				"join1 select(mapColumn(",
 				"          EMPNO,",
 				"          ENAME,",
-				"          COMM,",
+				"          JOB,",
 				"          DEPTNO = source2@DEPTNO,",
 				"          LOC",
 				"     ),",
