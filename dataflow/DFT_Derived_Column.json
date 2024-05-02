@@ -48,10 +48,15 @@
 				"          LastName = split(Name,'_')[2]) ~> derivedColumn1",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     input(",
+				"          ID as integer,",
+				"          FirstName as string,",
+				"          LastName as string",
+				"     ),",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
 				"     schemaName: 'dbo',",
-				"     tableName: '',",
+				"     tableName: 'tbNames',",
 				"     preSQLs:['DROP TABLE IF EXISTS tbNames\\nCREATE TABLE tbNames \\n(\\nID Int,\\nFirstName nvarchar(100),\\nLastName nvarchar(100)\\n\\n)'],",
 				"     insertable: true,",
 				"     updateable: false,",
@@ -59,7 +64,11 @@
 				"     upsertable: false,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          FirstName,",
+				"          LastName",
+				"     )) ~> sink1"
 			]
 		}
 	}
