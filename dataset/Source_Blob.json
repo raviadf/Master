@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "raviadf2024"
+				"fileName": "SampleCity.csv",
+				"container": "input"
 			}
 		}
 	},
