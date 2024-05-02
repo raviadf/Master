@@ -37,7 +37,7 @@
 				"     columnNamesAsHeader: true,",
 				"     multiLineRow: true) ~> source1",
 				"source1 split(ERROR_FUNCTION(''),",
-				"     disjoint: false) ~> split1@(, )"
+				"     disjoint: true) ~> split1@(, )"
 			]
 		}
 	}
