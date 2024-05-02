@@ -39,12 +39,6 @@
 						"referenceName": "BlobDynamicSource",
 						"type": "DatasetReference"
 					}
-				],
-				"outputs": [
-					{
-						"referenceName": "BlobDest",
-						"type": "DatasetReference"
-					}
 				]
 			},
 			{

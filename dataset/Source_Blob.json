@@ -2,7 +2,7 @@
 	"name": "Source_Blob",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "Conn_Blob",
+			"referenceName": "LS_BLOB_CONN",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],

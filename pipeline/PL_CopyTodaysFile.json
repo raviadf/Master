@@ -68,12 +68,6 @@
 							}
 						}
 					}
-				],
-				"outputs": [
-					{
-						"referenceName": "BlobDest",
-						"type": "DatasetReference"
-					}
 				]
 			}
 		],
