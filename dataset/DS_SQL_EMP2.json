@@ -1,0 +1,39 @@
+{
+	"name": "DS_SQL_EMP2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQL_CONN",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EMPNO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ENAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Job",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DeptNO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Loc",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "EMP_2"
+		}
+	}
+}
