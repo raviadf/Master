@@ -36,7 +36,7 @@
 				"     quoteChar: '\\\"',",
 				"     columnNamesAsHeader: true,",
 				"     multiLineRow: true) ~> source1",
-				"source1 derive(FirstName = ERROR_FUNCTION('')) ~> derivedColumn1"
+				"source1 derive(FirstName = split(Name,'_')[1]) ~> derivedColumn1"
 			]
 		}
 	}
