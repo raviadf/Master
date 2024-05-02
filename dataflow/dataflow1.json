@@ -68,7 +68,6 @@
 				"          EMPNO,",
 				"          ENAME,",
 				"          JOB,",
-				"          HIREDATE,",
 				"          SAL,",
 				"          COMM,",
 				"          DEPTNO = source1@DEPTNO,",
