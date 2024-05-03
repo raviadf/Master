@@ -19,7 +19,15 @@
 					"name": "source2"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "LS_SQL_CONN",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "join1"
@@ -64,24 +72,42 @@
 				"     broadcast: 'auto')~> join1",
 				"join1 derive(FirstName = split(ENAME,'_')[1],",
 				"          LastName = split(ENAME,'_')[2],",
-				"          TotalSalary = SAL+COMM) ~> derivedColumn1",
+				"          TotalSalary = add(SAL,COMM)) ~> derivedColumn1",
 				"derivedColumn1 select(mapColumn(",
 				"          EMPNO,",
-				"          ENAME,",
 				"          JOB,",
-				"          MGR,",
-				"          HIREDATE,",
-				"          SAL,",
-				"          COMM,",
-				"          DEPTNO = source1@DEPTNO,",
-				"          DEPTNO = source2@DEPTNO,",
 				"          DNAME,",
 				"          LOC,",
 				"          FirstName,",
-				"          LastName",
+				"          LastName,",
+				"          TotalSalary",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select1"
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'tbEMP',",
+				"     preSQLs:['\\ndrop table if exists  dbo.tbEMP\\ncreate table dbo.tbEMP\\n(\\nId int identity(1,1),\\nEmpNo int,\\nFirstName nvarchar(100),\\nLastName nvarchar(100),\\nJob nvarchar(100),\\nTotalSalary int,\\nDeptName nvarchar(100),\\nLOC nvarchar(100)\\n)\\n\\n'],",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     deletable: false,",
+				"     upsertable: false,",
+				"     recreate: true,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          EMPNO,",
+				"          JOB,",
+				"          DeptNAME = DNAME,",
+				"          LOC,",
+				"          FirstName,",
+				"          LastName,",
+				"          TotalSalary",
+				"     )) ~> sink1"
 			]
 		}
 	}
