@@ -1,0 +1,23 @@
+{
+	"name": "DS_BLOV_DEST",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BLOB_CONN",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "tbExpot_EMP.csv",
+				"container": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
