@@ -25,6 +25,9 @@
 					"name": "join1"
 				},
 				{
+					"name": "derivedColumn1"
+				},
+				{
 					"name": "select1"
 				}
 			],
@@ -59,7 +62,10 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
-				"join1 select(mapColumn(",
+				"join1 derive(FirstName = split(ENAME,'_')[1],",
+				"          LastName = split(ENAME,'_')[2],",
+				"          TotalSalary = SAL+COMM) ~> derivedColumn1",
+				"derivedColumn1 select(mapColumn(",
 				"          EMPNO,",
 				"          ENAME,",
 				"          JOB,",
@@ -70,7 +76,9 @@
 				"          DEPTNO = source1@DEPTNO,",
 				"          DEPTNO = source2@DEPTNO,",
 				"          DNAME,",
-				"          LOC",
+				"          LOC,",
+				"          FirstName,",
+				"          LastName",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1"
