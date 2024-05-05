@@ -41,7 +41,7 @@
 		"parameters": {
 			"varEnvir": {
 				"type": "string",
-				"defaultValue": "prod"
+				"defaultValue": "PROD"
 			}
 		},
 		"annotations": []
