@@ -1,0 +1,19 @@
+{
+	"name": "DS_DEMO_Config",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BLOB_CONN",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Config.txt",
+				"folderPath": "Config",
+				"container": "demo"
+			}
+		}
+	}
+}
