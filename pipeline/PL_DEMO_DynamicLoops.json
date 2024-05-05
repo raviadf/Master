@@ -17,7 +17,13 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "DS_Dynamic_Sourece",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Envir": {
+								"value": "@pipeline().parameters.varEnvir",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
 						"childItems"
@@ -34,7 +40,8 @@
 		],
 		"parameters": {
 			"varEnvir": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "UAT"
 			}
 		},
 		"annotations": []
