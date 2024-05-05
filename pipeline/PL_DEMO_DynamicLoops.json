@@ -72,8 +72,40 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"source": {
+									"type": "BinarySource",
+									"storeSettings": {
+										"type": "AzureBlobStorageReadSettings",
+										"recursive": true,
+										"prefix": "EMP",
+										"deleteFilesAfterCompletion": false
+									},
+									"formatSettings": {
+										"type": "BinaryReadSettings"
+									}
+								},
+								"sink": {
+									"type": "AzureSqlSink",
+									"writeBehavior": "insert",
+									"sqlWriterUseTableLock": false
+								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "DS_DEMO_Config",
+									"type": "DatasetReference",
+									"parameters": {
+										"Envir": "UAT"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DS_EMP",
+									"type": "DatasetReference"
+								}
+							]
 						}
 					]
 				}
