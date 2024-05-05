@@ -1,0 +1,58 @@
+{
+	"name": "DS_DynamicEMP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQL_CONN",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EMPNO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ENAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JOB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MGR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HIREDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "SAL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COMM",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEPTNO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Comments",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbDynamic_EMP"
+		}
+	}
+}
