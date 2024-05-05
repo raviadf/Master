@@ -5,6 +5,12 @@
 			"referenceName": "LS_BLOB_CONN",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Envir": {
+				"type": "string",
+				"defaultValue": "UAT"
+			}
+		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
