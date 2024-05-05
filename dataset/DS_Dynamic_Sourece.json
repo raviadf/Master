@@ -26,39 +26,6 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"name": "EMPNO",
-				"type": "String"
-			},
-			{
-				"name": "ENAME",
-				"type": "String"
-			},
-			{
-				"name": "JOB",
-				"type": "String"
-			},
-			{
-				"name": "MGR",
-				"type": "String"
-			},
-			{
-				"name": "HIREDATE",
-				"type": "String"
-			},
-			{
-				"name": "SAL",
-				"type": "String"
-			},
-			{
-				"name": "COMM",
-				"type": "String"
-			},
-			{
-				"name": "DEPTNO",
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }
