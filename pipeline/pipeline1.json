@@ -129,7 +129,10 @@
 							"userProperties": [],
 							"typeProperties": {
 								"variableName": "FileName",
-								"value": ""
+								"value": {
+									"value": "@activity('Get Metadata1').output.childItems",
+									"type": "Expression"
+								}
 							}
 						}
 					]
