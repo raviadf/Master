@@ -40,9 +40,6 @@
 				}
 			],
 			"scriptLines": [
-				"parameters{",
-				"     CSVFileName as string",
-				"}",
 				"source(output(",
 				"          EMPNO as string,",
 				"          ENAME as string,",
