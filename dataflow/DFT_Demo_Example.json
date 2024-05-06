@@ -5,6 +5,10 @@
 		"typeProperties": {
 			"sources": [
 				{
+					"dataset": {
+						"referenceName": "Demo_4_DS",
+						"type": "DatasetReference"
+					},
 					"name": "source1"
 				},
 				{
@@ -39,8 +43,20 @@
 				"parameters{",
 				"     CSVFileName as string",
 				"}",
-				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source1",
+				"source(output(",
+				"          EMPNO as string,",
+				"          ENAME as string,",
+				"          JOB as string,",
+				"          MGR as string,",
+				"          HIREDATE as string,",
+				"          SAL as string,",
+				"          COMM as string,",
+				"          DEPTNO as string,",
+				"          Comments as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
 				"source(output(",
 				"          DEPTNO as integer,",
 				"          DNAME as string,",
