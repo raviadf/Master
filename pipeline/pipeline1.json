@@ -52,7 +52,7 @@
 				"typeProperties": {
 					"variableName": "Array_Envir",
 					"value": {
-						"value": "@activity('Lookup1').output.value.Prop_0",
+						"value": "@activity('Lookup1').output.value",
 						"type": "Expression"
 					}
 				}
