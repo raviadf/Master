@@ -5,10 +5,6 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "DS_EMP_Source",
-						"type": "DatasetReference"
-					},
 					"name": "source1"
 				},
 				{
@@ -41,21 +37,10 @@
 			],
 			"scriptLines": [
 				"parameters{",
-				"     CSVFile as string",
+				"     CSVFileName as string",
 				"}",
-				"source(output(",
-				"          EMPNO as string,",
-				"          ENAME as string,",
-				"          JOB as string,",
-				"          MGR as string,",
-				"          HIREDATE as string,",
-				"          SAL as integer,",
-				"          COMM as integer,",
-				"          DEPTNO as integer",
-				"     ),",
-				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false) ~> source1",
 				"source(output(",
 				"          DEPTNO as integer,",
 				"          DNAME as string,",
