@@ -7,8 +7,7 @@
 		},
 		"parameters": {
 			"FolderName": {
-				"type": "string",
-				"defaultValue": "UAT"
+				"type": "string"
 			},
 			"FileName": {
 				"type": "string"
