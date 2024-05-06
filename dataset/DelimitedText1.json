@@ -1,9 +1,8 @@
 {
 	"name": "DelimitedText1",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "Conn_Blob",
-			"type": "LinkedServiceReference"
+		"folder": {
+			"name": "Old DS"
 		},
 		"annotations": [],
 		"type": "DelimitedText",

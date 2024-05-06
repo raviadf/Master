@@ -10,6 +10,9 @@
 				"type": "string"
 			}
 		},
+		"folder": {
+			"name": "Old DS"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

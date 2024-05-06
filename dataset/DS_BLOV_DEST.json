@@ -5,6 +5,9 @@
 			"referenceName": "LS_BLOB_CONN",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Old DS"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

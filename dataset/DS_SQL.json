@@ -1,9 +1,8 @@
 {
 	"name": "DS_SQL",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "Conn_AzureSQLDB",
-			"type": "LinkedServiceReference"
+		"folder": {
+			"name": "Old DS"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",

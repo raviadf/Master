@@ -5,6 +5,9 @@
 			"referenceName": "LS_SQL_CONN",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Old DS"
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [

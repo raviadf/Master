@@ -1,26 +1,27 @@
 {
-	"name": "DS_DEMO_Config",
+	"name": "Demo_2_DS",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_BLOB_CONN",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"Envir": {
-				"type": "string",
-				"defaultValue": "UAT"
+			"FolderName": {
+				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
 			}
-		},
-		"folder": {
-			"name": "Old DS"
 		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "Config.txt",
-				"folderPath": "Config",
+				"folderPath": {
+					"value": "@dataset().FolderName",
+					"type": "Expression"
+				},
 				"container": "demo"
 			}
 		}
