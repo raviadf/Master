@@ -155,10 +155,13 @@
 			}
 		],
 		"variables": {
-			"Array_Envir": {
-				"type": "Array"
+			"FolderName": {
+				"type": "String"
 			},
 			"var_Envir": {
+				"type": "String"
+			},
+			"FileName": {
 				"type": "String"
 			}
 		},
