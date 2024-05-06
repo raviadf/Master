@@ -116,7 +116,26 @@
 					"items": {
 						"value": "@activity('Get Metadata1').output.childItems.name",
 						"type": "Expression"
-					}
+					},
+					"activities": [
+						{
+							"name": "Set variable2",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "FileName",
+								"value": {
+									"value": "@item().value",
+									"type": "Expression"
+								}
+							}
+						}
+					]
 				}
 			}
 		],
