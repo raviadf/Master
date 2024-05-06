@@ -155,6 +155,22 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"dataflow": {
+									"referenceName": "DFT_Demo_Example",
+									"type": "DataFlowReference",
+									"datasetParameters": {
+										"source1": {
+											"FolderName": {
+												"value": "@variables('FolderName')",
+												"type": "Expression"
+											},
+											"FileName": {
+												"value": "@variables('FileName')",
+												"type": "Expression"
+											}
+										}
+									}
+								},
 								"compute": {
 									"coreCount": 8,
 									"computeType": "General"
