@@ -114,7 +114,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.childItems.Value",
+						"value": "@activity('Get Metadata1').output.childItems.Name",
 						"type": "Expression"
 					},
 					"activities": [
