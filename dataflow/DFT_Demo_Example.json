@@ -48,7 +48,7 @@
 				"          HIREDATE as string,",
 				"          SAL as string,",
 				"          COMM as string,",
-				"          DEPTNO as integer,",
+				"          DEPTNO as string,",
 				"          Comments as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
