@@ -1,0 +1,60 @@
+{
+	"name": "DB_SQL_SINK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQL_CONN",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EMPNO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ENAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JOB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MGR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "HIREDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "SAL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COMM",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEPTNO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Comments",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "EMP_Demo"
+		}
+	}
+}
