@@ -92,7 +92,6 @@
 				"     store: 'sqlserver',",
 				"     schemaName: 'dbo',",
 				"     tableName: 'tbEMP',",
-				"     preSQLs:['\\ndrop table if exists  dbo.tbEMP\\ncreate table dbo.tbEMP\\n(\\nId int identity(1,1),\\nEmpNo int,\\nFirstName nvarchar(100),\\nLastName nvarchar(100),\\nJob nvarchar(100),\\nTotalSalary int,\\nDName nvarchar(100),\\nLOC nvarchar(100),\\nComments nvarchar(100)\\n)'],",
 				"     insertable: true,",
 				"     updateable: false,",
 				"     deletable: false,",
