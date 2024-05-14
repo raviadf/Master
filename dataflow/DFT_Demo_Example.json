@@ -96,7 +96,6 @@
 				"     updateable: false,",
 				"     deletable: false,",
 				"     upsertable: false,",
-				"     recreate: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     errorHandlingOption: 'stopOnFirstError',",
