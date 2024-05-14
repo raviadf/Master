@@ -134,6 +134,46 @@
 									"type": "Expression"
 								}
 							}
+						},
+						{
+							"name": "Data flow1",
+							"type": "ExecuteDataFlow",
+							"dependsOn": [
+								{
+									"activity": "Set variable2",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"dataflow": {
+									"referenceName": "DFT_Demo_Example",
+									"type": "DataFlowReference",
+									"datasetParameters": {
+										"source1": {
+											"FolderName": {
+												"value": "@variables('var_Envir')",
+												"type": "Expression"
+											},
+											"FileName": "@item().name"
+										}
+									}
+								},
+								"compute": {
+									"coreCount": 8,
+									"computeType": "General"
+								},
+								"traceLevel": "Fine"
+							}
 						}
 					]
 				}
