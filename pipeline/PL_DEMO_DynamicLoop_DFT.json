@@ -164,7 +164,10 @@
 												"value": "@variables('var_Envir')",
 												"type": "Expression"
 											},
-											"FileName": "@item().name"
+											"FileName": {
+												"value": "@item().name",
+												"type": "Expression"
+											}
 										}
 									}
 								},
